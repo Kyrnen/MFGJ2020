@@ -16,5 +16,11 @@ public class PlayerCollision : MonoBehaviour
             movement.enabled = false;
             FindObjectOfType<GameManager>().GameOver();
         }
+
+        if(collision.collider.tag == "Waypoint")
+        {
+            Debug.Log("Ran into Waypoint");
+            pc.UpdateWaypoint();
+        }
     }
 }

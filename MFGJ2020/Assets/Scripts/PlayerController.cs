@@ -7,12 +7,18 @@ using UnityEngine.Animations;
 public class PlayerController : MonoBehaviour
 {
     public NavMeshAgent agent;
-    private Vector3 target= new Vector3(0f, 1f, 150f);
-    
+    public PathManager path;
+    private Vector3 target;
+
     [SerializeField]
     private float movementSpeed = 3;
     [SerializeField]
     private float acceleration = 0.005f;
+
+    private void Start()
+    {
+        target = path.GetWaypoint(path.CurrentIndex()).transform.position;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -29,6 +35,20 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 movement = transform.forward * movementSpeed * Time.deltaTime;
         agent.Move(movement);
+    }
+
+    public void UpdateWaypoint()
+    {
+        if (path.CurrentIndex() == path.MaxIndex())
+        {
+            Debug.Log("Win");
+        }
+        else
+        {
+            path.nextWaypoint();
+            target = path.GetWaypoint(path.CurrentIndex()).transform.position;
+        }
+
     }
 
 }
