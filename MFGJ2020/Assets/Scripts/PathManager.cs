@@ -6,10 +6,9 @@ using UnityEngine;
 public class PathManager : MonoBehaviour
 {
     [SerializeField]
-    private Transform[] waypoints;
+    private Vector3[] waypoints;
 
     [SerializeField]
-    private float moveSpeed = 2f;
     private int waypointIndex = 0;
 
 

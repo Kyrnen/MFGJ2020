@@ -11,9 +11,12 @@ public class PlayerController : MonoBehaviour
     
     [SerializeField]
     private float movementSpeed = 3;
+    [SerializeField]
+    private float acceleration = 0.005f;
     // Update is called once per frame
     void Update()
     {
+        movementSpeed += acceleration;
         agent.SetDestination(target);
         PathTrace();
     }
