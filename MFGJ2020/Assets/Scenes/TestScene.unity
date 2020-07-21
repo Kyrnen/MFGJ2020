@@ -257,6 +257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 79260924}
   - component: {fileID: 79260925}
+  - component: {fileID: 79260926}
   m_Layer: 0
   m_Name: Waypoint (6)
   m_TagString: Waypoint
@@ -286,11 +287,27 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 79260923}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &79260926
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79260923}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &128488523
 GameObject:
   m_ObjectHideFlags: 3
@@ -618,7 +635,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145165296}
-  m_LocalRotation: {x: 0.068415746, y: 0.00000001716606, z: -0.000000001177187, w: 0.99765694}
+  m_LocalRotation: {x: 0.06841574, y: -0.000000017166068, z: 0.0000000011771876, w: 0.99765694}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -692,7 +709,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196960621}
-  m_LocalRotation: {x: 0.050305534, y: 0.00000000429615, z: -2.1639408e-10, w: 0.9987339}
+  m_LocalRotation: {x: 0.050305534, y: -0.000000004296149, z: 2.1639404e-10, w: 0.9987339}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -855,6 +872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 380253675}
   - component: {fileID: 380253676}
+  - component: {fileID: 380253677}
   m_Layer: 0
   m_Name: Waypoint (3)
   m_TagString: Waypoint
@@ -884,11 +902,27 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 380253674}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &380253677
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380253674}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &398137007
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,6 +1329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 785211610}
   - component: {fileID: 785211611}
+  - component: {fileID: 785211612}
   m_Layer: 0
   m_Name: Waypoint (1)
   m_TagString: Waypoint
@@ -1324,11 +1359,27 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 785211609}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &785211612
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785211609}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &951020504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1651,6 +1702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1377670890}
   - component: {fileID: 1377670891}
+  - component: {fileID: 1377670892}
   m_Layer: 0
   m_Name: Waypoint (2)
   m_TagString: Waypoint
@@ -1680,11 +1732,27 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1377670889}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1377670892
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377670889}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1463709455
 GameObject:
   m_ObjectHideFlags: 0
@@ -1756,6 +1824,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1500249620}
   - component: {fileID: 1500249621}
+  - component: {fileID: 1500249622}
   m_Layer: 0
   m_Name: Waypoint (7)
   m_TagString: Waypoint
@@ -1785,11 +1854,27 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500249619}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1500249622
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500249619}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1553664480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1953,6 +2038,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1880434972}
   - component: {fileID: 1880434973}
+  - component: {fileID: 1880434974}
   m_Layer: 0
   m_Name: Waypoint (5)
   m_TagString: Waypoint
@@ -1982,11 +2068,27 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880434971}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1880434974
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880434971}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2036103184
 GameObject:
   m_ObjectHideFlags: 0
@@ -2065,7 +2167,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036103184}
-  m_LocalRotation: {x: 0.07204487, y: 0.000000014961193, z: -0.0000000010806854, w: 0.9974014}
+  m_LocalRotation: {x: 0.072044864, y: -0.0000000137293386, z: 9.917054e-10, w: 0.9974014}
   m_LocalPosition: {x: 0, y: 2.4403274, z: -34.73867}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2147,6 +2249,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2135154705}
   - component: {fileID: 2135154706}
+  - component: {fileID: 2135154707}
   m_Layer: 0
   m_Name: Waypoint (4)
   m_TagString: Waypoint
@@ -2176,8 +2279,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2135154704}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &2135154707
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135154704}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
