@@ -41,11 +41,13 @@ public class PlayerController : MonoBehaviour
     {
         if (path.CurrentIndex() == path.MaxIndex())
         {
+            //removes waypoint so it doesn't go flying endlessly into the abyss
+            path.GetWaypoint(path.CurrentIndex()).SetActive(false);
             Debug.Log("Win");
         }
         else
         {
-            path.nextWaypoint();
+            path.UpdateWaypoint();
             target = path.GetWaypoint(path.CurrentIndex()).transform.position;
         }
 

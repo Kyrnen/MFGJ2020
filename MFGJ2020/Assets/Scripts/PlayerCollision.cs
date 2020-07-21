@@ -19,7 +19,6 @@ public class PlayerCollision : MonoBehaviour
 
         if(collision.collider.tag == "Waypoint")
         {
-            Debug.Log("Ran into Waypoint");
             pc.UpdateWaypoint();
         }
     }
