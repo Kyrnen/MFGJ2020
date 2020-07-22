@@ -5,6 +5,9 @@ public class GameManager : MonoBehaviour
 {
     public float restartDelay = 10;
     bool gameEnded = false;
+    public int score;
+
+    public bool paused;
 
     //initialization
     public static GameManager instance;
@@ -13,8 +16,26 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
     }
-    // Start is called before the first frame update
 
+    void Update()
+    {
+        if(Input.GetButtonDown("Cancel"))
+        {
+            TogglePauseGame();
+        }
+    }
+
+    public void TogglePauseGame()
+    {
+        paused = !paused;
+
+        if (paused)
+            Time.timeScale = 0.0f;
+        else
+            Time.timeScale = 1.0f;
+
+        GameUI.instance.TogglePauseScreen(paused);
+    }
 
     public void GameOver()
     {
@@ -33,7 +54,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public int score;
+    
     public void WinGame()
     {
         GameUI.instance.SetEndScreen(true);

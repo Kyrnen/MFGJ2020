@@ -22,9 +22,17 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // to stop player input during pause
+        if (GameManager.instance.paused)
+            return;
+
         movementSpeed += acceleration;
         agent.SetDestination(target);
         PathTrace();
+
+        // to stop player input during pause
+
+        
     }
 
     /// <summary>

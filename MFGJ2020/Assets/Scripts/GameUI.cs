@@ -13,6 +13,8 @@ public class GameUI : MonoBehaviour
     public TextMeshProUGUI endScreenHeader;
     public TextMeshProUGUI endScreenScoreText;
 
+    public GameObject pauseScreen;
+
     //instance
     public static GameUI instance;
 
@@ -55,9 +57,21 @@ public class GameUI : MonoBehaviour
 
     public void OnMenuButton ()
     {
+        if (GameManager.instance.paused)
+            GameManager.instance.TogglePauseGame();
+
         SceneManager.LoadScene(0);
     }
 
+    public void TogglePauseScreen(bool paused)
+    {
+        pauseScreen.SetActive(paused);
+    }
+
+    public void OnResumeButton()
+    {
+        GameManager.instance.TogglePauseGame();
+    }    
 
 }
 
