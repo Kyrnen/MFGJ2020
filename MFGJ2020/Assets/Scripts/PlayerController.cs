@@ -29,10 +29,6 @@ public class PlayerController : MonoBehaviour
         movementSpeed += acceleration;
         agent.SetDestination(target);
         PathTrace();
-
-        // to stop player input during pause
-
-        
     }
 
     /// <summary>
