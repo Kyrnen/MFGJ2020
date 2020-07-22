@@ -560,7 +560,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138870250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.4403274, z: -34.73867}
+  m_LocalPosition: {x: 0, y: 2.4403274, z: -66.99867}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1361848499}
@@ -1011,7 +1011,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196960621}
-  m_LocalRotation: {x: 0.050305534, y: 0.00000000429615, z: -2.1639408e-10, w: 0.9987339}
+  m_LocalRotation: {x: 0.050305538, y: -0.000000004296149, z: 2.1639406e-10, w: 0.9987339}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1097,8 +1097,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364335383}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -6.17, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalPosition: {x: 0, y: -10, z: 0}
+  m_LocalScale: {x: 10, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 1294352789}
   m_RootOrder: 0
@@ -1879,7 +1879,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 785211609}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: 22.1, y: 0, z: 4.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 335431753}
@@ -2105,7 +2105,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 11
-  m_BaseOffset: 5
+  m_BaseOffset: 8
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!4 &1111459816
@@ -2116,7 +2116,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1111459813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -20.8}
+  m_LocalPosition: {x: 0, y: 0, z: -53.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 543450653355310102}
@@ -2376,7 +2376,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361848497}
-  m_LocalRotation: {x: 0.0865513, y: 1e-45, z: -0, w: 0.9962474}
+  m_LocalRotation: {x: 0.0865513, y: -0, z: -0, w: 0.9962474}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2531,7 +2531,7 @@ GameObject:
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1377670890
 Transform:
   m_ObjectHideFlags: 0
@@ -2540,7 +2540,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1377670889}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 335431753}
@@ -2601,7 +2601,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1463709455}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -37.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 335431753}
@@ -3027,7 +3027,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036103184}
   m_LocalRotation: {x: 0.072044864, y: -0.0000000137293386, z: 9.917054e-10, w: 0.9974014}
-  m_LocalPosition: {x: 0, y: 2.4403274, z: -34.73867}
+  m_LocalPosition: {x: 0, y: 2.4403274, z: -66.99867}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3532,12 +3532,12 @@ PrefabInstance:
     - target: {fileID: 1383647982787392322, guid: 7c50f73e6e3ff7147a3e53c625e5a3d1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1383647982787392322, guid: 7c50f73e6e3ff7147a3e53c625e5a3d1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1383647982787392322, guid: 7c50f73e6e3ff7147a3e53c625e5a3d1,
         type: 3}
@@ -3594,10 +3594,51 @@ PrefabInstance:
       propertyPath: game
       value: 
       objectReference: {fileID: 951020506}
+    - target: {fileID: 1493240142464292579, guid: 7c50f73e6e3ff7147a3e53c625e5a3d1,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493240142464292579, guid: 7c50f73e6e3ff7147a3e53c625e5a3d1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493240142464292583, guid: 7c50f73e6e3ff7147a3e53c625e5a3d1,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493240142464292583, guid: 7c50f73e6e3ff7147a3e53c625e5a3d1,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493240142464292583, guid: 7c50f73e6e3ff7147a3e53c625e5a3d1,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493240142464292588, guid: 7c50f73e6e3ff7147a3e53c625e5a3d1,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493240142464292588, guid: 7c50f73e6e3ff7147a3e53c625e5a3d1,
+        type: 3}
+      propertyPath: m_UpdateMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1763269406983072248, guid: 7c50f73e6e3ff7147a3e53c625e5a3d1,
         type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Fish
       objectReference: {fileID: 0}
+    - target: {fileID: 6947211925384794423, guid: 7c50f73e6e3ff7147a3e53c625e5a3d1,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: 7c52d72b97505aa4b9b979db8c51445e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c50f73e6e3ff7147a3e53c625e5a3d1, type: 3}

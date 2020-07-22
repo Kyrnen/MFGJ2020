@@ -8,7 +8,7 @@ public class PathManager : MonoBehaviour
 {
     private GameObject[] waypoints;
 
-    private int waypointIndex = 0;
+    private static int waypointIndex = 0;
     private int maxIndex;
 
 
@@ -18,17 +18,11 @@ public class PathManager : MonoBehaviour
         waypoints = GameObject.FindGameObjectsWithTag("Waypoint").OrderBy(x =>x.transform.GetSiblingIndex()).ToArray();
         maxIndex = waypoints.Length-1;
 
-        ////check that waypoints are coming in in order
-        //foreach (GameObject waypoint in waypoints)
-        //{
-        //    Debug.Log(waypoint.name);
-        //}
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        //check that waypoints are coming in in order
+        foreach (GameObject waypoint in waypoints)
+        {
+            Debug.Log(waypoint.name);
+        }
     }
 
     public void UpdateWaypoint()
