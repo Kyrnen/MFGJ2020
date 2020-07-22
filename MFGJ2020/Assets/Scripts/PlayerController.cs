@@ -9,9 +9,10 @@ public class PlayerController : MonoBehaviour
     public NavMeshAgent agent;
     public PathManager path;
     private Vector3 target;
-
-    [SerializeField]
     private float movementSpeed = 3;
+    private float turnSmoothTime = 0.1f;
+    private float turnSmoothVelocity;
+
     [SerializeField]
     private float acceleration = 0.005f;
 
@@ -27,7 +28,7 @@ public class PlayerController : MonoBehaviour
             return;
 
         movementSpeed += acceleration;
-        agent.SetDestination(target);
+        agent.destination = target;
         PathTrace();
     }
 
@@ -37,8 +38,26 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void PathTrace()
     {
-        Vector3 movement = transform.forward * movementSpeed * Time.deltaTime;
+
+        Vector3 direction = GetDirection();
+        ApplyRotation(direction);
+       
+        Vector3 movement = direction * movementSpeed * Time.deltaTime;
         agent.Move(movement);
+    }
+
+    private Vector3 GetDirection()
+    {
+        Vector3 heading = target - transform.position;
+        float distance = heading.magnitude;
+        return heading / distance;
+    }
+
+    private void ApplyRotation(Vector3 direction)
+    {
+        float targetAngle = Mathf.Atan2(direction.x, direction.z);
+        float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+        transform.rotation = Quaternion.Euler(0f, angle, 0f);
     }
 
     public void UpdateWaypoint()
