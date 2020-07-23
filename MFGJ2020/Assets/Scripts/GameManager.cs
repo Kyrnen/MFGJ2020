@@ -57,4 +57,19 @@ public class GameManager : MonoBehaviour
         score += scoreToGive;
         GameUI.instance.UpdateScoreText();
     }
+
+    public void LevelEnd()
+    {
+        // is this the last level?
+        if (SceneManager.sceneCountInBuildSettings == SceneManager.GetActiveScene().buildIndex + 1)
+        {
+            WinGame();
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
+
+    }
 }

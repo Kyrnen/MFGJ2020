@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
         {
             //removes waypoint so it doesn't go flying endlessly into the abyss
             path.GetWaypoint(path.CurrentIndex()).SetActive(false);
-            Debug.Log("Win");
+            GameManager.instance.LevelEnd();
         }
         else
         {
@@ -91,6 +91,7 @@ public class PlayerController : MonoBehaviour
         }
         else if(other.CompareTag("Coin"))
         {
+            GameManager.instance.AddScore(1);
             Destroy(other.gameObject);
             audioSource.Play();
         }
