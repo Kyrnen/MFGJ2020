@@ -39,14 +39,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        if (!gameEnded)
-        {
-            gameEnded = true;
-            Debug.Log("Game Over");
-            //Restart Game, Continue, Exit, etc.
-            Invoke("Restart", restartDelay);
-        }
-
+        GameUI.instance.SetEndScreen(false);    
     }
 
     void Restart()

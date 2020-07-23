@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Obstacle
   - Waypoint
+  - Enemy
+  - Coin
   layers:
   - Default
   - TransparentFX

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Animations;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -15,7 +16,13 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private float acceleration = 0.005f;
+    private AudioSource audioSource;
 
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     private void Start()
     {
         target = path.GetWaypoint(path.CurrentIndex()).transform.position;
@@ -74,6 +81,19 @@ public class PlayerController : MonoBehaviour
             target = path.GetWaypoint(path.CurrentIndex()).transform.position;
         }
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Enemy"))
+        {
+            GameManager.instance.GameOver();
+        }
+        else if(other.CompareTag("Coin"))
+        {
+            Destroy(other.gameObject);
+            audioSource.Play();
+        }
     }
 
 }
