@@ -39,7 +39,8 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        GameUI.instance.SetEndScreen(false);    
+        GameUI.instance.SetEndScreen(false);
+        Time.timeScale = 0.0f;
     }
 
     void Restart()

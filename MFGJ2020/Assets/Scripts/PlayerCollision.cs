@@ -17,7 +17,7 @@ public class PlayerCollision : MonoBehaviour
             FindObjectOfType<GameManager>().GameOver();
         }
 
-        if(collision.collider.tag == "Waypoint")
+        if (collision.collider.tag == "Waypoint")
         {
             pc.UpdateWaypoint();
         }

@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private float movementSpeed = 3;
     private float turnSmoothTime = 0.1f;
     private float turnSmoothVelocity;
+    private Rigidbody rig;
 
     [SerializeField]
     private float acceleration = 0.005f;
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        rig = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
     }
     private void Start()
@@ -83,7 +85,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Enemy"))
         {
@@ -94,6 +96,10 @@ public class PlayerController : MonoBehaviour
             GameManager.instance.AddScore(1);
             Destroy(other.gameObject);
             audioSource.Play();
+        }
+        else if (other.CompareTag("Waypoint"))
+        {
+            PathManager.instance.UpdateWaypoint();
         }
     }
 
