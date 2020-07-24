@@ -17,13 +17,12 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private float acceleration = 0.005f;
-    private AudioSource audioSource;
+    
 
 
     private void Awake()
     {
         rig = GetComponent<Rigidbody>();
-        audioSource = GetComponent<AudioSource>();
     }
     private void Start()
     {
@@ -85,22 +84,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if(other.CompareTag("Enemy"))
-        {
-            GameManager.instance.GameOver();
-        }
-        else if(other.CompareTag("Coin"))
-        {
-            GameManager.instance.AddScore(1);
-            Destroy(other.gameObject);
-            audioSource.Play();
-        }
-        else if (other.CompareTag("Waypoint"))
-        {
-            PathManager.instance.UpdateWaypoint();
-        }
-    }
+   
 
 }

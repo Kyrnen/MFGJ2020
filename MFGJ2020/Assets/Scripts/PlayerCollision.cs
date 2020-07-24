@@ -22,4 +22,24 @@ public class PlayerCollision : MonoBehaviour
             pc.UpdateWaypoint();
         }
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            GameManager.instance.GameOver();
+        }
+        else if (other.CompareTag("Coin"))
+        {
+            GameManager.instance.AddScore(1);
+            other.gameObject.GetComponent<AudioSource>().Play();
+            Destroy(other.gameObject, other.gameObject.GetComponent<AudioSource>().clip.length);
+
+        }
+        else if (other.CompareTag("Waypoint"))
+        {
+            PathManager.instance.UpdateWaypoint();
+            Debug.Log("moving waypoint");
+        }
+    }
 }
