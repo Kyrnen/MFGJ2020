@@ -11,17 +11,10 @@ public class PlayerMovement : MonoBehaviour
     readonly float dashSpeed = 25f;
 
     readonly float h_multiplier = 5f;
-    readonly float v_multiplier = 5f;
-
-    float jumpDistance = 3f;
-    float jumpSpeed = 4f;
-    float fallSpeed = 7f;
 
     bool canMove = true;
     int line = 0;
     int targetLine = 0;
-    int level = 0;
-    int targetLevel = 0;
 
     private void Update()
     {
@@ -44,17 +37,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow) && canMove && line < 1)
         {
             targetLine++;
-            canMove = false;
-        }
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) && canMove && level < 1)
-        {
-            targetLevel++;
-            canMove = false;
-            
-        }
-        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow) && canMove && level > 1)
-        {
-            targetLevel--;
             canMove = false;
         }
     }
@@ -85,18 +67,6 @@ public class PlayerMovement : MonoBehaviour
             }
 
         }
-        if (!level.Equals(targetLevel))
-        {
-
-            if(targetLevel == 1 && pos.y < v_multiplier)
-            {
-                Jump(Vector3.up);
-            }
-            if(targetLevel == -1 && pos.y > -v_multiplier)
-            {
-                Jump(Vector3.down);
-            }
-        }
     }
     void SetSpeed()
     {
@@ -119,27 +89,6 @@ public class PlayerMovement : MonoBehaviour
             yield return null;
         }
     }
-    IEnumerator MoveVert(Vector3 direction)
-    {
-        Vector3 destination = transform.localPosition + direction * jumpDistance;
-
-        while(transform.localPosition != destination)
-        {
-            transform.localPosition = Vector3.MoveTowards(transform.localPosition, destination, jumpSpeed * Time.deltaTime);
-            yield return null;
-        }
-
-        yield return new WaitForSeconds(.1f);
-        Vector3 endpoint = transform.localPosition - direction * jumpDistance;
-
-        while(transform.localPosition != endpoint)
-        {
-            transform.localPosition = Vector3.MoveTowards(transform.localPosition, endpoint, fallSpeed * Time.deltaTime);
-            yield return null;
-        }
-
-        yield return new WaitForEndOfFrame();
-    }
 
     private void Move(Vector3 direction)
     {
@@ -148,10 +97,4 @@ public class PlayerMovement : MonoBehaviour
         canMove = true;
     }
 
-    private void Jump(Vector3 direction)
-    {
-        StartCoroutine(MoveVert(direction));
-        level = targetLevel = 0;
-        canMove = true;
-    }
 }
