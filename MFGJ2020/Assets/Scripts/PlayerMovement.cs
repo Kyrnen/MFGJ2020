@@ -29,12 +29,12 @@ public class PlayerMovement : MonoBehaviour
     private void CheckInput()
     {
         SetSpeed();
-        if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow) && canMove && line > -1)
+        if((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) && canMove && line > -1)
         {
             targetLine--;
             canMove = false;
         }
-        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow) && canMove && line < 1)
+        if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) && canMove && line < 1)
         {
             targetLine++;
             canMove = false;
