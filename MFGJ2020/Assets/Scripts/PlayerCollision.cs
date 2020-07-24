@@ -32,8 +32,8 @@ public class PlayerCollision : MonoBehaviour
         else if (other.CompareTag("Coin"))
         {
             GameManager.instance.AddScore(1);
-            other.gameObject.GetComponent<AudioSource>().Play();
-            Destroy(other.gameObject, other.gameObject.GetComponent<AudioSource>().clip.length);
+            pc.gameObject.GetComponent<AudioSource>().Play();
+            Destroy(other.gameObject);
 
         }
         else if (other.CompareTag("Waypoint"))
