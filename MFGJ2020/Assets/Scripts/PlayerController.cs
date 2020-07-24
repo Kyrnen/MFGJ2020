@@ -10,13 +10,13 @@ public class PlayerController : MonoBehaviour
     public NavMeshAgent agent;
     public PathManager path;
     private Vector3 target;
-    private float movementSpeed = 3;
-    private float turnSmoothTime = 0.1f;
+    private float movementSpeed = 5f;
+    private float turnSmoothTime = 1.5f;
     private float turnSmoothVelocity;
     private Rigidbody rig;
 
     [SerializeField]
-    private float acceleration = 0.005f;
+    private float acceleration = 0.05f;
     
 
 
