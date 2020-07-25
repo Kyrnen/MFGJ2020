@@ -54,7 +54,7 @@ public class GameUI : MonoBehaviour
     public void OnRestartButton ()
     {
         path.ResetWaypoints();
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void OnMenuButton ()

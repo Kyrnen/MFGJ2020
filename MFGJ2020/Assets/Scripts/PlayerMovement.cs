@@ -33,11 +33,13 @@ public class PlayerMovement : MonoBehaviour
         {
             targetLine--;
             canMove = false;
+            Debug.Log("A");
         }
         if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) && canMove && line < 1)
         {
             targetLine++;
             canMove = false;
+            Debug.Log("D");
         }
     }
 

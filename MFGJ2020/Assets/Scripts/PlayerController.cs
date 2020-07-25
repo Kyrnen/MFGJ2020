@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
         movementSpeed += acceleration;
         agent.destination = target;
         PathTrace();
+
+        Debug.Log("Player" + transform.position + "Go To:  " + target);
     }
 
     /// <summary>
