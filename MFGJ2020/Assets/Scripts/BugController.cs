@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinController : MonoBehaviour
+public class BugController : MonoBehaviour
 {
     public float bobSpeed;
     public float rotateSpeed;

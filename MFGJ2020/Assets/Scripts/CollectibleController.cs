@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net.Sockets;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class CollectibleController : MonoBehaviour
 {
     public float speed;
     public Vector3 offsetEndPos;
