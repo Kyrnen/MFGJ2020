@@ -35,6 +35,15 @@ public class PathManager : MonoBehaviour
         waypointIndex++;
     }
 
+    public void ResetWaypoints()
+    {
+        foreach (GameObject waypoint in waypoints)
+        {
+            waypoint.SetActive(true);
+        }
+        waypointIndex = 0;
+    }
+
     public int CurrentIndex()
     {
         return waypointIndex;

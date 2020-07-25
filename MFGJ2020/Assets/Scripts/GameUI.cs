@@ -14,6 +14,7 @@ public class GameUI : MonoBehaviour
     public TextMeshProUGUI endScreenScoreText;
 
     public GameObject pauseScreen;
+    public PathManager path;
 
     //instance
     public static GameUI instance;
@@ -52,6 +53,7 @@ public class GameUI : MonoBehaviour
 
     public void OnRestartButton ()
     {
+        path.ResetWaypoints();
         SceneManager.LoadScene(1);
     }
 
