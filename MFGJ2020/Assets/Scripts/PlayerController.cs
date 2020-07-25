@@ -26,14 +26,7 @@ public class PlayerController : MonoBehaviour
     }
     private void Start()
     {
-        if (path)
-        {
             target = path.GetWaypoint(path.CurrentIndex()).transform.position;
-        }
-        else
-        {
-            target = this.transform.position;
-        }
     }
     // Update is called once per frame
     void Update()
