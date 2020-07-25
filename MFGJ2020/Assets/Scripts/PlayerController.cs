@@ -26,7 +26,14 @@ public class PlayerController : MonoBehaviour
     }
     private void Start()
     {
-        target = path.GetWaypoint(path.CurrentIndex()).transform.position;
+        if (path)
+        {
+            target = path.GetWaypoint(path.CurrentIndex()).transform.position;
+        }
+        else
+        {
+            target = this.transform.position;
+        }
     }
     // Update is called once per frame
     void Update()
@@ -46,7 +53,6 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void PathTrace()
     {
-
         Vector3 direction = GetDirection();
         ApplyRotation(direction);
        
