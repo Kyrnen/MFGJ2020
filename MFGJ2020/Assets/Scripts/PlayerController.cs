@@ -13,20 +13,13 @@ public class PlayerController : MonoBehaviour
     private float movementSpeed = 5f;
     private float turnSmoothTime = 1.5f;
     private float turnSmoothVelocity;
-    private Rigidbody rig;
 
     [SerializeField]
     private float acceleration = 0.05f;
-    
 
-
-    private void Awake()
-    {
-        rig = GetComponent<Rigidbody>();
-    }
     private void Start()
     {
-            target = path.GetWaypoint(path.CurrentIndex()).transform.position;
+        target = path.GetWaypoint(path.CurrentIndex()).transform.position;
     }
     // Update is called once per frame
     void Update()
