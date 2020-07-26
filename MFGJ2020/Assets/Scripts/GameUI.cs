@@ -37,7 +37,7 @@ public class GameUI : MonoBehaviour
     public void SetEndScreen (bool hasWon)
     {
         endScreen.SetActive(true);
-        endScreenHeader.text = "<b>Score</b>\n" + GameManager.instance.score;
+        endScreenScoreText.text = "<b>Score</b>\n" + GameManager.instance.score;
         if(hasWon)
         {
             endScreenHeader.text = "You Win";
