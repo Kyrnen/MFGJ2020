@@ -63,7 +63,7 @@ public class GameUI : MonoBehaviour
     {
         if (GameManager.instance.paused)
             GameManager.instance.TogglePauseGame();
-        
+
         SceneManager.LoadScene(0);
     }
 

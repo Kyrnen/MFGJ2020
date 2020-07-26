@@ -10,10 +10,6 @@ public class LevelLoader : MonoBehaviour
 
     public float transitionTime = 1f;
 
-    private void Awake()
-    {
-        transition.SetTrigger("Start");
-    }
     public void OnClick()
     {
         StartCoroutine(Transition());
@@ -34,7 +30,7 @@ public class LevelLoader : MonoBehaviour
         transition.SetTrigger("End");
     }
 
-    public IEnumerator LoadLevel(int levelIndex)
+    IEnumerator LoadLevel(int levelIndex)
     {
         //Play animation
         transition.SetTrigger("Start");

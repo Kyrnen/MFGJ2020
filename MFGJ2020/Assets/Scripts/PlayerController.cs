@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
         agent.destination = target;
         PathTrace();
 
-        //Debug.Log("Player" + transform.position + "Go To:  " + target);
+        Debug.Log("Player" + transform.position + "Go To:  " + target);
     }
 
     /// <summary>
