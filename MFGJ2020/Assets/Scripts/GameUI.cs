@@ -54,6 +54,8 @@ public class GameUI : MonoBehaviour
     public void OnRestartButton ()
     {
         path.ResetWaypoints();
+        if (GameManager.instance.paused)
+            GameManager.instance.TogglePauseGame();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

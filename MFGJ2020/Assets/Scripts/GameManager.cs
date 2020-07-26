@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
     public void WinGame()
     {
         GameUI.instance.SetEndScreen(true);
+        Time.timeScale = 0.0f;
     }
     public void AddScore(int scoreToGive)
     {
