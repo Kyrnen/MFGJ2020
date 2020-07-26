@@ -16,8 +16,6 @@ public class GameUI : MonoBehaviour
     public GameObject pauseScreen;
     public PathManager path;
 
-    public Animator transition;
-
     //instance
     public static GameUI instance;
 
@@ -58,9 +56,6 @@ public class GameUI : MonoBehaviour
         path.ResetWaypoints();
         if (GameManager.instance.paused)
             GameManager.instance.TogglePauseGame();
-        transition.SetTrigger("Start");
-
-        StartCoroutine("WaitForSeconds(1f)");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
